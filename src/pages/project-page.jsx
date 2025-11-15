@@ -32,7 +32,7 @@ export default function ProjectPage() {
             <div className="max-w-6xl mx-auto">
                 <div className="flex items-start gap-6">
                     <div className="flex-shrink-0">
-                        <Link to="/" className="btn btn-primary text-primary-content">
+                        <Link to="/" className="btn btn-primary text-base-content">
                             Back
                         </Link>
                     </div>
@@ -76,10 +76,10 @@ export default function ProjectPage() {
                                                 </div>
 
                                                 <div className="flex justify-between mt-6 pt-4 border-t border-secondary-content border-opacity-20">
-                                                    <button className="btn btn-primary btn-sm text-primary-content">
+                                                    <button className="btn btn-primary btn-sm text-base-content">
                                                         Look at Project
                                                     </button>
-                                                    <button className="btn btn-primary btn-sm text-primary-content">
+                                                    <button className="btn btn-primary btn-sm text-base-content">
                                                         Project Code
                                                     </button>
                                                 </div>

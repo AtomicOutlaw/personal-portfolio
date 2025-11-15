@@ -36,18 +36,18 @@ export default function MainPage() {
             </div>
 
             <div className="flex justify-center gap-8 mb-16">
-                <Link to="/projects" className="btn btn-primary text-primary-content px-6 py-2">
+                <Link to="/projects" className="btn btn-primary text-base-content px-6 py-2">
                     Projects
                 </Link>
-                <Link to="/resume" className="btn btn-primary text-primary-content px-6 py-2">
+                <Link to="/resume" className="btn btn-primary text-base-content px-6 py-2">
                     Resume
                 </Link>
-                <button className="btn btn-primary text-primary-content px-6 py-2" onClick={() => setShowContact(!showContact)}>
+                <button className="btn btn-primary text-base-content px-6 py-2" onClick={() => setShowContact(!showContact)}>
                     {showContact ? 'Description' : 'Contact Info'}
                 </button>
             </div>
 
-            <div className="max-w-2xl mx-auto bg-base-200 p-8 rounded-lg">
+            <div className="max-w-2xl mx-auto bg-base-200 p-8 rounded-lg text-white">
                 {showContact ? (
                     <div>
                         <h3 className="text-2xl font-bold mb-6 text-center">Contact Info</h3>

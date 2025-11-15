@@ -18,7 +18,7 @@ export default function ResumePage() {
             <div className="max-w-4xl mx-auto">
                 <div className="flex flex-col lg:flex-row items-start gap-6">
                     <div className="flex-shrink-0">
-                        <Link to="/" className="btn btn-primary text-primary-content">
+                        <Link to="/" className="btn btn-primary text-base-content">
                             Back
                         </Link>
                     </div>
@@ -30,7 +30,7 @@ export default function ResumePage() {
                     </div>
 
                     <div className="flex-shrink-0 self-end">
-                        <button className="btn btn-primary text-primary-content" onClick={handleDownload}>
+                        <button className="btn btn-primary text-base-content" onClick={handleDownload}>
                             Download
                         </button>
                     </div>
