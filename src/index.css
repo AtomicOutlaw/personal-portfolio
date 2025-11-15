@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @plugin "daisyui" {
@@ -23,7 +24,11 @@
     --radius-box: 1rem;
     --size-selector: 0.21875rem;
     --size-field: 0.25rem;
-    --border: 1px;
+    --border: 2px;
     --depth: 1;
     --noise: 0;
+}
+
+body {
+    font-family: 'Jura', sans-serif;
 }
