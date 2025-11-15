@@ -7,8 +7,7 @@ import {ghPages} from "vite-plugin-gh-pages";
 export default defineConfig({
   plugins: [
     react(),
-    tailwindcss(),
-      ghPages()
+    tailwindcss()
   ],
   base: '/personal-portfolio/',
 })
