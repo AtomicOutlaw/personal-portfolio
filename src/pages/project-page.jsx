@@ -25,24 +25,14 @@ function ImageCarousel({ images, projectName }) {
 
     return (
         <div className="relative bg-black w-full h-64 rounded-lg overflow-hidden">
-            <img
-                src={images[currentImageIndex]}
-                alt={`${projectName} - Image ${currentImageIndex + 1}`}
-                className="w-full h-full object-contain"
-            />
+            <img src={images[currentImageIndex]} alt={`${projectName} - Image ${currentImageIndex + 1}`} className="w-full h-full object-contain"/>
 
             {images.length > 1 && (
                 <>
-                    <button
-                        onClick={prevImage}
-                        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-1 rounded-full hover:bg-opacity-75 transition-all"
-                    >
+                    <button onClick={prevImage} className="absolute left-0.5 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-1 rounded-full hover:bg-opacity-75 transition-all">
                         ‹
                     </button>
-                    <button
-                        onClick={nextImage}
-                        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-1 rounded-full hover:bg-opacity-75 transition-all"
-                    >
+                    <button onClick={nextImage} className="absolute right-0.5 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-1 rounded-full hover:bg-opacity-75 transition-all">
                         ›
                     </button>
                 </>
@@ -83,7 +73,7 @@ export default function ProjectPage() {
             name: "Card Game Application",
             folder: "Project1",
             groupMembers: ["Kane", "Tricia", "Jackson", "Griffin", "Rod", "Christopher", "Matthew", "Ayden"],
-            description: "A website that allows you to play card games. The games consisted of total 20, a game you need to stack cards up to 20 (or custom amount), and a memory card game. You could login, play as a guest, see user and global stats, change user info and icon, and login or sign up. The website was designed for younger kids to lear math with the 20 total game and earn point when logged-in. Done with a Express (Javascript) front and back end.",
+            description: "A website that allows you to play card games. The games consisted of total 20, a game you need to stack cards up to 20 (or custom amount), and a memory card game. You could login, play as a guest, see user and global stats, change user info and icon, and login or sign up. The website was designed for younger kids to lear math with the 20 total game and earn point when logged-in. Done with a Express (Javascript) front and back end. This project taught me how to work in a big development group, learning proper communication, how to work in a development team, and how to communicate with the customer of the product meeting demands and how to have client meetings.",
             imageCount: 7
         },
         {
@@ -91,7 +81,7 @@ export default function ProjectPage() {
             name: "Internal Ticket System",
             folder: "Project2",
             groupMembers: ["Ayden", "Jackson"],
-            description: "An internal ticket system to keep track of customers, tickets, and customer units. It is meant for technicians to keep track of whats going on with customer units, and easily make new tickets with saved customers and saved units for the customer. Each ticket has a note section so each technician that works on the unit can make notes of progress and where they got to on the unit. This has two projects, one is the front end, and the second is the API with the database. Done with React (Javascript) front end and Express (Javascript) back end.",
+            description: "An internal ticket system to keep track of customers, tickets, and customer units. It is meant for technicians to keep track of whats going on with customer units, and easily make new tickets with saved customers and saved units for the customer. Each ticket has a note section so each technician that works on the unit can make notes of progress and where they got to on the unit. This has two projects, one is the front end, and the second is the API with the database. Done with React (Javascript) front end and Express (Javascript) back end. This project showed me how to properly split up the back and front end keeping them separate but still properly communicate with each other to properly work and make everything functional. Since the front and back end were split up it really showed whats included in the back and front end respectively. The project also showed how to handle partners leaving as half way through the teacher made the projects individual.",
             imageCount: 2
         },
         {
@@ -99,7 +89,7 @@ export default function ProjectPage() {
             name: "Dart Scoring Application",
             folder: "Project3",
             groupMembers: ["Ayden"],
-            description: "This Android application is meant to keep track of scoring during dart games and practice. By choosing from practice, 2 player, 3 player, or 4 player. The application has a info page popping up a dart scoring cheat sheet, and a home page always leading to the screen to chose which game mode. There is a best score tracker tracking each game and changing which game was your best in each mode, by PPD (points per dart). The app has a database keeping information in the background and a custom image for its icon. Built in Android Studio using Java.",
+            description: "This Android application is meant to keep track of scoring during dart games and practice. By choosing from practice, 2 player, 3 player, or 4 player. The application has a info page popping up a dart scoring cheat sheet, and a home page always leading to the screen to chose which game mode. There is a best score tracker tracking each game and changing which game was your best in each mode, by PPD (points per dart). The app has a database keeping information in the background and a custom image for its icon. Built in Android Studio using Java. This application introduced me to building android apps, this project was a learning curve as we had to implement features we weren't taught in class and had to lear on our own. It also was the first proper android application I built and had a connection to as I was building it for someone I know who suggested I build a dart scoring app.",
             imageCount: 7
         }
     ];
@@ -115,7 +105,7 @@ export default function ProjectPage() {
                 <h1 className="text-4xl font-bold">Projects</h1>
             </div>
 
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-400 mx-auto">
                 <div className="flex items-start gap-6">
                     <div className="flex-shrink-0">
                         <Link to="/" className="btn btn-primary text-base-content flex flex-col items-center gap-0.25">
