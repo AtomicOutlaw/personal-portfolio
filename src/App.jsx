@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import {HashRouter as Router, Route, Routes} from "react-router-dom";
 import MainPage from './pages/main-page.jsx';
 import ResumePage from './pages/resume-page.jsx';
 import ProjectPage from './pages/project-page.jsx';
