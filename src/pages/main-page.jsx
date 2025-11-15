@@ -11,7 +11,7 @@ export default function MainPage() {
                 <div className="flex justify-center mb-4 w-full">
                     <div className="hover-3d">
                         <figure className="max-w-60 rounded-2xl border-3 border-purple-500 shadow-xl/30">
-                            <img src="/personal-profile/profilr-pic/profile-pic/profile-pic.jpeg" alt="Profile Picture" />
+                            <img src="https://atomicoutlaw.github.io/personal-portfolio/profile-pic/profile-pic.jpeg" alt="Profile Picture" />
                         </figure>
                         {/* 8 empty divs needed for the 3D effect */}
                         <div></div>
