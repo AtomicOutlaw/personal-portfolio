@@ -11,7 +11,7 @@ export default function MainPage() {
                 <div className="flex justify-center mb-4 w-full">
                     <div className="hover-3d">
                         <figure className="max-w-60 rounded-2xl border-3 border-purple-500 shadow-xl/30">
-                            <img src="/profile-pic/profile-pic.jpeg" alt="Profile Picture" />
+                            <img src="profile-pic/profile-pic.jpeg" alt="Profile Picture" />
                         </figure>
                         {/* 8 empty divs needed for the 3D effect */}
                         <div></div>
@@ -37,7 +37,7 @@ export default function MainPage() {
                                     className="btn btn-circle btn-primary text-base-content shadow-lg hover:scale-110 transition-transform tooltip"
                                     data-tip="GitHub"
                                 >
-                                    <img src="/logos/github-logo.png" alt="GitHub" className="w-6 h-6"/>
+                                    <img src="logos/github-logo.png" alt="GitHub" className="w-6 h-6"/>
                                 </a>
 
                                 <a
@@ -47,7 +47,7 @@ export default function MainPage() {
                                     className="btn btn-circle btn-primary text-base-content shadow-lg hover:scale-110 transition-transform tooltip"
                                     data-tip="LinkedIn"
                                 >
-                                    <img src="/logos/linkedin-logo.png" alt="LinkedIn" className="w-6 h-6"/>
+                                    <img src="logos/linkedin-logo.png" alt="LinkedIn" className="w-6 h-6"/>
                                 </a>
                             </div>
                         )}
@@ -70,7 +70,7 @@ export default function MainPage() {
                                     className="btn btn-circle btn-primary text-base-content shadow-lg hover:scale-110 transition-transform tooltip"
                                     data-tip="YouTube"
                                 >
-                                    <img src="/logos/youtube-logo.png" alt="YouTube" className="w-6 h-6"/>
+                                    <img src="logos/youtube-logo.png" alt="YouTube" className="w-6 h-6"/>
                                 </a>
 
                                 <a
@@ -80,7 +80,7 @@ export default function MainPage() {
                                     className="btn btn-circle btn-primary text-base-content shadow-lg hover:scale-110 transition-transform tooltip"
                                     data-tip="Instagram"
                                 >
-                                    <img src="/logos/instagram-logo.png" alt="Instagram" className="w-6 h-6"/>
+                                    <img src="logos/instagram-logo.png" alt="Instagram" className="w-6 h-6"/>
                                 </a>
                             </div>
                         )}
