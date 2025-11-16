@@ -1,5 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import profilePic from '../assets/profile-pic/profile-pic.jpeg';
+import githubLogo from '../assets/logos/github-logo.png';
+import linkedinLogo from '../assets/logos/linkedin-logo.png';
+import youtubeLogo from '../assets/logos/youtube-logo.png';
+import instagramLogo from '../assets/logos/instagram-logo.png';
 
 export default function MainPage() {
     const [showContact, setShowContact] = useState(false);
@@ -11,7 +16,7 @@ export default function MainPage() {
                 <div className="flex justify-center mb-4 w-full">
                     <div className="hover-3d">
                         <figure className="max-w-60 rounded-2xl border-3 border-purple-500 shadow-xl/30">
-                            <img src="https://atomicoutlaw.github.io/personal-portfolio/profile-pic/profile-pic.jpeg" alt="Profile Picture" />
+                            <img src={profilePic} alt="Profile Picture" />
                         </figure>
                         {/* 8 empty divs needed for the 3D effect */}
                         <div></div>
@@ -37,7 +42,7 @@ export default function MainPage() {
                                     className="btn btn-circle btn-primary text-base-content shadow-lg hover:scale-110 transition-transform tooltip"
                                     data-tip="GitHub"
                                 >
-                                    <img src="/personal-portfolio/logos/github-logo.png" alt="GitHub" className="w-6 h-6"/>
+                                    <img src={githubLogo} alt="GitHub" className="w-6 h-6"/>
                                 </a>
 
                                 <a
@@ -47,7 +52,7 @@ export default function MainPage() {
                                     className="btn btn-circle btn-primary text-base-content shadow-lg hover:scale-110 transition-transform tooltip"
                                     data-tip="LinkedIn"
                                 >
-                                    <img src="/personal-portfolio/logos/linkedin-logo.png" alt="LinkedIn" className="w-6 h-6"/>
+                                    <img src={linkedinLogo} alt="LinkedIn" className="w-6 h-6"/>
                                 </a>
                             </div>
                         )}
@@ -70,7 +75,7 @@ export default function MainPage() {
                                     className="btn btn-circle btn-primary text-base-content shadow-lg hover:scale-110 transition-transform tooltip"
                                     data-tip="YouTube"
                                 >
-                                    <img src="/personal-portfolio/logos/youtube-logo.png" alt="YouTube" className="w-6 h-6"/>
+                                    <img src={youtubeLogo} alt="YouTube" className="w-6 h-6"/>
                                 </a>
 
                                 <a
@@ -80,7 +85,7 @@ export default function MainPage() {
                                     className="btn btn-circle btn-primary text-base-content shadow-lg hover:scale-110 transition-transform tooltip"
                                     data-tip="Instagram"
                                 >
-                                    <img src="/personal-portfolio/logos/instagram-logo.png" alt="Instagram" className="w-6 h-6"/>
+                                    <img src={instagramLogo} alt="Instagram" className="w-6 h-6"/>
                                 </a>
                             </div>
                         )}

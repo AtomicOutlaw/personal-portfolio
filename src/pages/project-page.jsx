@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import arrowIcon from '../assets/logos/arrow-l-icon.png';
 
 // Image carousel component
 function ImageCarousel({ images, projectName }) {
@@ -47,20 +48,25 @@ function ImageCarousel({ images, projectName }) {
     );
 }
 
-// Function to generate image paths automatically
-function generateImagePaths(projectFolder, maxImages = 10) {
-    const images = [];
-    for (let i = 1; i <= maxImages; i++) {
-        images.push(`/projects/${projectFolder}/img${i}.png`);
+function getProjectImage(projectFolder, imageNumber) {
+    try {
+        const imagePath = `../assets/projects/${projectFolder}/img${imageNumber}.png`;
+        const modules = import.meta.glob('../assets/projects/**/*', { eager: true });
+        return modules[imagePath]?.default;
+    } catch (error) {
+        console.warn(`Image not found: ${projectFolder}/img${imageNumber}.png`);
+        return null;
     }
-    return images;
 }
 
 // Function to check which images actually exist
 function getExistingImages(projectFolder, imageCount) {
     const images = [];
     for (let i = 1; i <= imageCount; i++) {
-        images.push(`/projects/${projectFolder}/img${i}.png`);
+        const image = getProjectImage(projectFolder, i);
+        if (image) {
+            images.push(image);
+        }
     }
     return images;
 }
@@ -110,7 +116,7 @@ export default function ProjectPage() {
                     <div className="flex-shrink-0">
                         <Link to="/" className="btn btn-primary text-base-content flex flex-col items-center gap-0.25">
                             Back
-                            <img src="/logos/arrow-l-icon.png" className="w-4 h-4"/>
+                            <img src={arrowIcon} className="w-4 h-4"/>
                         </Link>
                     </div>
 
