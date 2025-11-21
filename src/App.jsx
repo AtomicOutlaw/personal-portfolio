@@ -11,7 +11,7 @@ function App() {
                 <Route path="/resume" element={<ResumePage />} />
                 <Route path="/projects" element={<ProjectPage />} />
             </Routes>
-            <footer className="fixed bottom-2 right-2 bg-base-200 p-3 rounded-lg text-sm">
+            <footer className="fixed bottom-2 right-2 bg-base-200 p-2 md:p-3 rounded-lg text-xs md:text-sm max-w-[200px] md:max-w-none">
                 <p>This website was made by Ayden Coleman</p>
                 <p>This website was last updated 11/14/2025</p>
             </footer>

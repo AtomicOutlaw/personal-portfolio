@@ -15,27 +15,50 @@ export default function ResumePage() {
     };
 
     return (
-        <div className="min-h-screen bg-base-100 text-base-content p-8">
-            <div className="text-center mb-8">
-                <h1 className="text-4xl font-bold">Resume</h1>
+        <div className="min-h-screen bg-base-100 text-base-content p-4">
+            <div className="text-center mb-6">
+                <h1 className="text-3xl md:text-4xl font-bold">Resume</h1>
+            </div>
+
+            {/* Mobile Layout - Buttons on top */}
+            <div className="lg:hidden flex justify-between items-center mb-4">
+                <Link to="/" className="btn btn-primary text-base-content flex items-center gap-2">
+                    <img src={arrowIcon} className="w-4 h-4" />
+                    Back
+                </Link>
+                <button
+                    className="btn btn-primary text-base-content flex items-center gap-2"
+                    onClick={handleDownload}
+                >
+                    <img src={downloadIcon} className="w-4 h-4" />
+                    Download
+                </button>
             </div>
 
             <div className="max-w-4xl mx-auto">
-                <div className="flex flex-col lg:flex-row items-start gap-6">
-                    <div className="flex-shrink-0">
+                <div className="flex flex-col lg:flex-row items-start gap-4 lg:gap-6">
+                    {/* Desktop Back Button */}
+                    <div className="hidden lg:flex flex-shrink-0">
                         <Link to="/" className="btn btn-primary text-base-content flex flex-col items-center gap-0.25">
                             Back
                             <img src={arrowIcon} className="w-4 h-4"/>
                         </Link>
                     </div>
 
-                    <div className="bg-base-300 rounded-box p-6 flex-1">
-                        <div className="bg-black mx-auto shadow-xl" style={{width: '100%', maxWidth: '816px', height: '1056px', aspectRatio: '8.5/11'}}>
-                            <img src={resumeImg} alt="Resume Image" className="w-full h-full object-contain" />
+                    {/* Resume Image */}
+                    <div className="bg-base-300 rounded-box p-4 lg:p-6 w-full">
+                        <div className="bg-black mx-auto shadow-xl overflow-hidden rounded-lg">
+                            <img
+                                src={resumeImg}
+                                alt="Resume"
+                                className="w-full h-auto object-contain"
+                                style={{ maxHeight: '70vh' }}
+                            />
                         </div>
                     </div>
 
-                    <div className="flex-shrink-0 self-end">
+                    {/* Desktop Download Button */}
+                    <div className="hidden lg:flex flex-shrink-0 self-end">
                         <button className="btn btn-primary text-base-content flex flex-col items-center gap-0.25" onClick={handleDownload}>
                             Download
                             <img src={downloadIcon} className="w-4 h-4"/>

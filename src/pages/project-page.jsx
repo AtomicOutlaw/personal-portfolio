@@ -23,13 +23,13 @@ function ImageCarousel({ images, videos, projectName }) {
     };
 
     if (allMedia.length === 0) return (
-        <div className="bg-black w-full h-64 rounded-lg flex items-center justify-center">
+        <div className="bg-black w-full h-48 md:h-64 rounded-lg flex items-center justify-center">
             <p className="text-white">No media available</p>
         </div>
     );
 
     return (
-        <div className="relative bg-black w-full h-64 rounded-lg overflow-hidden">
+        <div className="relative bg-black w-full h-48 md:h-64 rounded-lg overflow-hidden">
             {allMedia[currentIndex].type === 'image' ? (
                 <img
                     src={allMedia[currentIndex].src}
@@ -136,7 +136,7 @@ export default function ProjectPage() {
             name: "Internal Ticket System",
             folder: "Project2",
             groupMembers: ["Ayden", "Jackson"],
-            description: "An internal ticket system to keep track of customers, tickets, and customer units. It is meant for technicians to keep track of what’s going on with customer units and easily make new tickets with saved customers and saved units for the customer. Each ticket has a note section so each technician that works on the unit can make notes of progress and where they got to on the unit. This has two projects, one is the front end, and the second is the API with the database. Done with React (JavaScript) front end and Express (JavaScript) back end. This project showed me how to properly split up the back and front end keeping them separate but still properly communicate with each other to properly work and make everything functional. Since the front and back end were split up it really showed what’s included in the back and front end respectively. The project also showed how to handle partners leaving as halfway through the teacher made the projects individual. NOTE: This project is still a work in progress, not all functionality is fully implemented yet.",
+            description: "An internal ticket system to keep track of customers, tickets, and customer units. It is meant for technicians to keep track of what's going on with customer units and easily make new tickets with saved customers and saved units for the customer. Each ticket has a note section so each technician that works on the unit can make notes of progress and where they got to on the unit. This has two projects, one is the front end, and the second is the API with the database. Done with React (JavaScript) front end and Express (JavaScript) back end. This project showed me how to properly split up the back and front end keeping them separate but still properly communicate with each other to properly work and make everything functional. Since the front and back end were split up it really showed what's included in the back and front end respectively. The project also showed how to handle partners leaving as halfway through the teacher made the projects individual. NOTE: This project is still a work in progress, not all functionality is fully implemented yet.",
             imageCount: 4,
             videoCount: 0
         },
@@ -154,7 +154,7 @@ export default function ProjectPage() {
             name: "PC Mac Build",
             folder: "Project4",
             groupMembers: ["Ayden"],
-            description: "This is a custom-built computer by me. I came across an old Mac pro 5.1 tower, gutted the computer and put moder PC components. I built a custom metal back plate for the motherboard to sit on the old motherboard standoffs inn the case, then added standoffs to the added backplate so the motherboard doesn't short out. It was my first computer build ever, so through the whole process I was still learning how computer parts went together and through the build I had to learning how to put all the computer parts into a case not built for modern computer parts. This build taught me how to properly put together computers, computer hardware problem solving with putting together a computer, making parts fit where they weren't supposed to, and how to properly cool hardware, it also taught me how to install and setup new computers. To this day it’s used as a server PC, mainly running the odd modded Minecraft server. The whole building process of this PC can be found on my YouTube channel in 2 videos, the first is me gutting the PC, the second is me putting the whole computer together. ",
+            description: "This is a custom-built computer by me. I came across an old Mac pro 5.1 tower, gutted the computer and put moder PC components. I built a custom metal back plate for the motherboard to sit on the old motherboard standoffs inn the case, then added standoffs to the added backplate so the motherboard doesn't short out. It was my first computer build ever, so through the whole process I was still learning how computer parts went together and through the build I had to learning how to put all the computer parts into a case not built for modern computer parts. This build taught me how to properly put together computers, computer hardware problem solving with putting together a computer, making parts fit where they weren't supposed to, and how to properly cool hardware, it also taught me how to install and setup new computers. To this day it's used as a server PC, mainly running the odd modded Minecraft server. The whole building process of this PC can be found on my YouTube channel in 2 videos, the first is me gutting the PC, the second is me putting the whole computer together. ",
             imageCount: 4,
             videoCount: 1
         },
@@ -166,76 +166,77 @@ export default function ProjectPage() {
     }));
 
     return (
-        <div className="min-h-screen bg-base-100 text-base-content p-8">
-            <div className="text-center mb-8">
-                <h1 className="text-4xl font-bold">Projects</h1>
+        <div className="min-h-screen bg-base-100 text-base-content p-4">
+            <div className="text-center mb-6">
+                <h1 className="text-3xl md:text-4xl font-bold">Projects</h1>
             </div>
 
-            <div className="max-w-400 mx-auto">
-                <div className="flex items-start gap-6">
-                    <div className="flex-shrink-0">
-                        <Link to="/" className="btn btn-primary text-base-content flex flex-col items-center gap-0.25">
-                            Back
-                            <img src={arrowIcon} className="w-4 h-4"/>
-                        </Link>
-                    </div>
+            <div className="max-w-full">
+                {/* Back Button - Always on top for mobile */}
+                <div className="flex justify-start mb-4">
+                    <Link to="/" className="btn btn-primary text-base-content flex items-center gap-2">
+                        <img src={arrowIcon} className="w-4 h-4"/>
+                        Back
+                    </Link>
+                </div>
 
-                    <div className="bg-base-300 rounded-box p-6 flex-1 overflow-hidden min-h-[600px]">
-                        <div className="overflow-x-auto w-full">
-                            <div className="flex space-x-6 items-start" style={{ width: `calc(${projectsWithMedia.length} * 450px + ${projectsWithMedia.length - 1} * 1.5rem)` }}>
-                                {projectsWithMedia.map((project) => (
-                                    <div key={project.id} className="flex-shrink-0 shadow-xl">
-                                        <div className="card w-[420px] bg-secondary text-secondary-content shadow-xl">
-                                            <figure className="px-4 pt-4">
-                                                <ImageCarousel
-                                                    images={project.images}
-                                                    videos={project.videos}
-                                                    projectName={project.name}
-                                                />
-                                            </figure>
+                <div className="bg-base-300 rounded-box p-4 md:p-6 w-full overflow-hidden">
+                    <div className="overflow-x-auto w-full">
+                        <div className="flex space-x-4 md:space-x-6 items-start min-w-max">
+                            {projectsWithMedia.map((project) => (
+                                <div key={project.id} className="flex-shrink-0 shadow-xl w-[90vw] md:w-[420px]">
+                                    <div className="card w-full bg-secondary text-secondary-content shadow-xl">
+                                        <figure className="px-3 md:px-4 pt-3 md:pt-4">
+                                            <ImageCarousel
+                                                images={project.images}
+                                                videos={project.videos}
+                                                projectName={project.name}
+                                            />
+                                        </figure>
 
-                                            <div className="card-body p-4">
-                                                <div className="space-y-4">
-                                                    <div className="flex justify-between items-center">
-                                                        <span className="font-semibold whitespace-nowrap">Project name:</span>
-                                                        <span className="text-right ml-3 font-medium">{project.name}</span>
-                                                    </div>
+                                        <div className="card-body p-3 md:p-4">
+                                            <div className="space-y-3 md:space-y-4">
+                                                <div className="flex justify-between items-center">
+                                                    <span className="font-semibold whitespace-nowrap text-sm md:text-base">Project name:</span>
+                                                    <span className="text-right ml-3 font-medium text-sm md:text-base">{project.name}</span>
+                                                </div>
 
-                                                    <div>
-                                                        <div className="font-semibold mb-2">Project Group Members:</div>
-                                                        <div className="text-sm">
-                                                            {project.groupMembers.join(', ')}
-                                                        </div>
-                                                    </div>
-
-                                                    <div>
-                                                        <div className="font-semibold mb-2">Project Description:</div>
-                                                        <div className="text-sm leading-relaxed">{project.description}</div>
+                                                <div>
+                                                    <div className="font-semibold mb-1 md:mb-2 text-sm md:text-base">Project Group Members:</div>
+                                                    <div className="text-xs md:text-sm">
+                                                        {project.groupMembers.join(', ')}
                                                     </div>
                                                 </div>
 
-                                                {/* Buttons for later implements to have projects running and code viewable
-                                                <div className="flex justify-between mt-6 pt-4 border-t border-secondary-content border-opacity-20">
-                                                    <button className="btn btn-primary btn-sm text-base-content">
-                                                        Look at Project
-                                                    </button>
-                                                    <button className="btn btn-primary btn-sm text-base-content">
-                                                        Project Code
-                                                    </button>
+                                                <div>
+                                                    <div className="font-semibold mb-1 md:mb-2 text-sm md:text-base">Project Description:</div>
+                                                    <div className="text-xs md:text-sm leading-relaxed max-h-32 overflow-y-auto">
+                                                        {project.description}
+                                                    </div>
                                                 </div>
-                                                */}
                                             </div>
+
+                                            {/* Buttons for later implements to have projects running and code viewable
+                                            <div className="flex justify-between mt-6 pt-4 border-t border-secondary-content border-opacity-20">
+                                                <button className="btn btn-primary btn-sm text-base-content">
+                                                    Look at Project
+                                                </button>
+                                                <button className="btn btn-primary btn-sm text-base-content">
+                                                    Project Code
+                                                </button>
+                                            </div>
+                                            */}
                                         </div>
                                     </div>
-                                ))}
-                            </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div className="text-center mt-6 text-sm opacity-80">
-                    <p>Scroll horizontally to view more projects</p>
-                </div>
+            <div className="text-center mt-4 text-sm opacity-80">
+                <p>Scroll horizontally to view more projects</p>
             </div>
         </div>
     )
