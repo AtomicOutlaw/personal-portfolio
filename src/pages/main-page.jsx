@@ -110,8 +110,8 @@ export default function MainPage() {
                     <div>
                         <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-center">Contact Info</h3>
                         <div className="text-center space-y-3 md:space-y-4">
-                            <p className="text-base md:text-lg">Phone: (306)-111-1111</p>
-                            <p className="text-base md:text-lg">Email: email@email.com</p>
+                            <p className="text-base md:text-lg">Phone: (306)-290-8571</p>
+                            <p className="text-base md:text-lg">Email: aydenjames988@gmail.com</p>
                         </div>
                     </div>
                 ) : (
